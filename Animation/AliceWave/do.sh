@@ -46,7 +46,7 @@ done
 
 
 rm -f test.avi 
-ffmpeg -framerate 10  -i alice_w%03d.png -c:v huffyuv alice_wave.avi
+ffmpeg -framerate 10  -i alice_w%03d.png -vcodec mpeg4 alice_wave.avi
 
 #rm alice*.png 
 

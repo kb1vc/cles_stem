@@ -24,7 +24,7 @@ do
 done
 
 rm -f test.avi 
-ffmpeg -framerate 10  -i bob_w%03d.png -c:v huffyuv bob_wave.avi
+ffmpeg -framerate 10  -i bob_w%03d.png -vcodec mpeg4 bob_wave.avi
 
 rm bob*.png 
 

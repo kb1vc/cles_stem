@@ -15,7 +15,7 @@ done
 
 
 rm -f BA_walk.avi 
-ffmpeg -v 48 -framerate 3  -i BAw_%03d.png -c:v huffyuv BA_walk.avi
+ffmpeg -v 48 -framerate 3  -i BAw_%03d.png -vcodec mpeg4 BA_walk.avi
 
 rm *.png 
 
