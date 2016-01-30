@@ -15,7 +15,7 @@
    id="svg4284"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="alice2.svg">
+   sodipodi:docname="alice_sm001.svg">
   <defs
      id="defs4286">
     <inkscape:path-effect
@@ -30,9 +30,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.8133333"
-     inkscape:cx="204.55513"
-     inkscape:cy="384.16057"
+     inkscape:zoom="8.2212948"
+     inkscape:cx="116.60288"
+     inkscape:cy="390.24415"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -50,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -75,7 +75,7 @@
        sodipodi:nodetypes="czc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 35.282917,789.80296 c 0,0 19.18565,-62.33352 44.67575,-78.18257 28.859713,-17.94419 70.253033,6.52676 101.761443,-6.20497 27.74749,-11.21204 74.27527,-35.49735 74.27527,-35.49735"
+       d="m 35.282917,789.80296 c 0,0 19.18565,-62.33352 44.67575,-78.18257 28.859713,-17.94419 70.253033,6.52676 101.761443,-6.20497 27.74749,-11.21204 68.25463,-48.39873 68.25463,-48.39873"
        id="path4838"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="casc" />
@@ -105,11 +105,17 @@
        rx="2.4082568"
        ry="3.0963302" />
     <ellipse
-       ry="3.0963302"
-       rx="2.4082568"
-       cy="651.55939"
+       ry="0.88674831"
+       rx="2.5209227"
+       cy="651.47339"
        cx="135.55045"
        id="ellipse4143"
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.498;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.27266806;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 132.79817,646.05481 c 3.44036,-0.34404 2.24964,-0.53994 3.61238,-0.34404 1.36274,0.1959 4.30046,1.72019 4.30046,1.72019 l 0,0"
+       id="path4142"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czcc" />
   </g>
 </svg>
