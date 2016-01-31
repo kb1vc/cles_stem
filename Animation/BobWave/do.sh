@@ -4,7 +4,7 @@ for fi in bob*.svg
 do
     bn=`basename $fi .svg`
     
-    convert $fi ${bn}.png
+    inkscape -f $fi -e ${bn}.png
 done
 
 for (( i = 0; i < 5; i++))
