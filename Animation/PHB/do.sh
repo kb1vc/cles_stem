@@ -4,7 +4,7 @@ for fi in phb*.svg
 do
     bn=`basename $fi .svg`
     
-    convert $fi ${bn}.png
+    inkscape -f $fi -e ${bn}.png
 done
 let l=0;
 for (( i = 0; i < 5; i++))
@@ -20,7 +20,8 @@ done
 
 
 rm -f phb_talk.avi 
-ffmpeg -framerate 15  -i phb_t%03d.png -vcodec mpeg4 phb_talk.avi
+ffmpeg -framerate 15  -i phb_t%03d.png -vcodec mpeg4 phb_talk.mp4
 
-rm phb*.png 
+rm phb*.png
+inkscape -f phb9.svg -e phb_still.png
 

@@ -6,7 +6,7 @@ for fi in WB_rocket*.svg
 do
     bn=`basename $fi .svg`
     
-    convert $fi ${bn}.png
+    inkscape -f $fi  -e ${bn}.png
 done
 
 let l=0
@@ -64,16 +64,16 @@ do
 done
 
 rm WB_robot.avi
-ffmpeg -framerate 2  -i WB_robot_%03d.png -vcodec mpeg4 WB_robot.avi
+ffmpeg -framerate 2  -i WB_robot_%03d.png -vcodec mpeg4 WB_robot.mp4
 
 rm WB_robot*.png
 
 # this is the opening frame
-convert WB_robot0.svg WB_robot_run_first.png
-convert WB_robot_run_19.svg WB_robot_run_last.png
+inkscape -f WB_robot0.svg -e WB_robot_run_first.png
+inkscape -f WB_robot_run_19.svg -e WB_robot_run_last.png
 
 
 
 # this is the opening frame
-convert WB_clear.svg WB_clear.png
-convert WB_rocket19.svg WB_rocket_final.png
+inkscape -f  WB_clear.svg -e WB_clear.png
+inkscape -f  WB_rocket19.svg -e WB_rocket_final.png
