@@ -23,8 +23,10 @@ do
     ln -s bob0.png bob_w${an}.png
 done
 
-rm -f test.avi 
-ffmpeg -framerate 10  -i bob_w%03d.png -vcodec mpeg4 bob_wave.avi
+rm -f bob_wave.mov
+#ffmpeg -framerate 10  -i bob_w%03d.png -vcodec mpeg4 bob_wave.avi
+#ffmpeg -framerate 10  -i bob_w%03d.png -c:v libx264 -crf 20 -pix_fmt yuv420p bob_wave.mov
+ffmpeg -framerate 10  -i bob_w%03d.png -vcodec mpeg4 bob_wave.mp4
 
 rm bob*.png 
 
