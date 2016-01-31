@@ -4,7 +4,7 @@ for fi in alice*.svg
 do
     bn=`basename $fi .svg`
     
-    convert $fi ${bn}.png
+    inkscape -f $fi -e ${bn}.png
 done
 
 for (( i = 0; i < 5; i++))
@@ -45,8 +45,9 @@ do
 done
 
 
-rm -f test.avi 
-ffmpeg -framerate 10  -i alice_w%03d.png -vcodec mpeg4 alice_wave.avi
+rm -f alice_wave.mp4
+ffmpeg -framerate 10  -i alice_w%03d.png -vcodec mpeg4 alice_wave.mp4
 
-#rm alice*.png 
-
+rm alice0.png 
+rm alice1.png 
+rm alice_w*.png

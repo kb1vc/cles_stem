@@ -28,5 +28,6 @@ rm -f bob_wave.mov
 #ffmpeg -framerate 10  -i bob_w%03d.png -c:v libx264 -crf 20 -pix_fmt yuv420p bob_wave.mov
 ffmpeg -framerate 10  -i bob_w%03d.png -vcodec mpeg4 bob_wave.mp4
 
-rm bob*.png 
-
+rm bob0.png 
+rm bob1.png 
+rm bob_w*.png

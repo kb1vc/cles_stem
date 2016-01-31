@@ -4,7 +4,7 @@ for fi in BAw_0[01][0-9]*.svg
 do
     bn=`basename $fi .svg`
     
-    convert $fi ${bn}.png
+    inkscape -f $fi  -e ${bn}.png
 done
 
 for i in `seq 18 30`
@@ -14,8 +14,8 @@ do
 done
 
 
-rm -f BA_walk.avi 
-ffmpeg -v 48 -framerate 3  -i BAw_%03d.png -vcodec mpeg4 BA_walk.avi
+rm -f BA_walk.mp4
+ffmpeg -v 48 -framerate 3  -i BAw_%03d.png -vcodec mpeg4 BA_walk.mp4
 
 rm *.png 
 
