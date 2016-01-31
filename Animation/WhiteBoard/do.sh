@@ -1,12 +1,13 @@
-#!/bin/bash
+#!/bin/bash -v
 
 
 
 for fi in WB_rocket*.svg
 do
     bn=`basename $fi .svg`
-    
+    echo "converting $fi"
     inkscape -f $fi  -e ${bn}.png
+    sleep 1
 done
 
 let l=0
@@ -28,9 +29,9 @@ do
 done
 
     
-rm -f WB_rocket.avi 
+rm -f WB_rocket.mp4
 #ffmpeg -framerate 10  -i WB_rocket_%03d.png -c:v huffyuv WB_rocket.avi
-ffmpeg -framerate 10  -i WB_rocket_%03d.png -vcodec mpeg4 WB_rocket.avi
+ffmpeg -framerate 10  -i WB_rocket_%03d.png -vcodec mpeg4 WB_rocket.mp4
 
 rm WB_rocket*.png 
 
@@ -39,13 +40,15 @@ rm WB_rocket*.png
 for fi in WB_robot[0-9].svg
 do
     bn=`basename $fi .svg`
-    convert $fi ${bn}_still.png
+    inkscape -f $fi -e ${bn}_still.png
+    sleep 1
 done
 
 for fi in WB_robot_run_*.svg
 do
     bn=`basename $fi .svg`
-    convert $fi ${bn}.png
+    inkscape -f $fi -e ${bn}.png
+    sleep 1
 done
 
 let l=0
@@ -63,17 +66,20 @@ do
     l=$((l+1))
 done
 
-rm WB_robot.avi
+rm WB_robot.mp4
 ffmpeg -framerate 2  -i WB_robot_%03d.png -vcodec mpeg4 WB_robot.mp4
 
-rm WB_robot*.png
+# rm WB_robot*.png
 
 # this is the opening frame
 inkscape -f WB_robot0.svg -e WB_robot_run_first.png
+
 inkscape -f WB_robot_run_19.svg -e WB_robot_run_last.png
 
 
 
 # this is the opening frame
 inkscape -f  WB_clear.svg -e WB_clear.png
+
 inkscape -f  WB_rocket19.svg -e WB_rocket_final.png
+
