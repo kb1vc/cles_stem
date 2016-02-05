@@ -33,9 +33,8 @@ rm -f WB_rocket.mp4
 #ffmpeg -framerate 10  -i WB_rocket_%03d.png -c:v huffyuv WB_rocket.avi
 ffmpeg -framerate 10  -i WB_rocket_%03d.png -vcodec mpeg4 WB_rocket.mp4
 
-rm WB_rocket*.png 
 
-
+rm *.png
 
 for fi in WB_robot[0-9].svg
 do

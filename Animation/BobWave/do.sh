@@ -26,8 +26,10 @@ done
 rm -f bob_wave.mov
 #ffmpeg -framerate 10  -i bob_w%03d.png -vcodec mpeg4 bob_wave.avi
 #ffmpeg -framerate 10  -i bob_w%03d.png -c:v libx264 -crf 20 -pix_fmt yuv420p bob_wave.mov
-ffmpeg -framerate 10  -i bob_w%03d.png -vcodec mpeg4 bob_wave.mp4
-
+#ffmpeg -framerate 10  -i bob_w%03d.png -vcodec mpeg4 bob_wave.mp4
+#avconv -i "bob_w%03d.png" -r 10 -c:v libx264 -crf 20 -pix_fmt yuv420p bob_wave.mov
+#avconv -i "bob_w%03d.png" -r 10 -c:v libx264  -pix_fmt yuv420p bob_wave.mov
+avconv -i "bob_w%03d.png" -r 10 -c:v mpeg1video  -pix_fmt yuv420p bob_wave.mov
 rm bob0.png 
 rm bob1.png 
 rm bob_w*.png
