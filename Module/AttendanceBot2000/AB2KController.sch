@@ -21227,6 +21227,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <text x="-93.98" y="38.1" size="2.54" layer="91">Matt Reilly</text>
 <text x="-12.7" y="38.1" size="2.54" layer="91">A</text>
 <text x="-144.78" y="147.32" size="1.27" layer="91">Note swap of Sen 0 and Sen 1 for routing convenience</text>
+<text x="-93.98" y="48.26" size="1.778" layer="91">REV B. Note relocation of AUD_TXD and AUD_RXD on JP1</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="-177.8" y="149.86"/>
@@ -22024,9 +22025,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </net>
 <net name="AUD_TXD" class="0">
 <segment>
-<pinref part="JP1" gate="G$1" pin="7"/>
-<wire x1="-124.46" y1="193.04" x2="-116.84" y2="193.04" width="0.1524" layer="91"/>
-<label x="-116.84" y="193.04" size="1.27" layer="95" xref="yes"/>
+<label x="-116.84" y="195.58" size="1.27" layer="95" xref="yes"/>
+<pinref part="JP1" gate="G$1" pin="8"/>
+<wire x1="-116.84" y1="195.58" x2="-124.46" y2="195.58" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="*5"/>
@@ -22036,9 +22037,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </net>
 <net name="AUD_RXD" class="0">
 <segment>
-<pinref part="JP1" gate="G$1" pin="6"/>
-<wire x1="-124.46" y1="190.5" x2="-116.84" y2="190.5" width="0.1524" layer="91"/>
-<label x="-116.84" y="190.5" size="1.27" layer="95" xref="yes"/>
+<label x="-116.84" y="193.04" size="1.27" layer="95" xref="yes"/>
+<pinref part="JP1" gate="G$1" pin="7"/>
+<wire x1="-124.46" y1="193.04" x2="-116.84" y2="193.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="*6"/>

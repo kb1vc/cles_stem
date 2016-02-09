@@ -8,7 +8,7 @@
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
@@ -150,7 +150,7 @@
 <wire x1="101.27" y1="0" x2="101.27" y2="80" width="0" layer="20"/>
 <hole x="3.81" y="3.81" drill="3.2"/>
 <hole x="96.52" y="3.81" drill="3.2"/>
-<text x="6.35" y="2.54" size="1.778" layer="21">AttBot2K Rev A.0
+<text x="6.35" y="2.54" size="1.778" layer="21">AttBot2K Rev B.0
 (C) M. H. Reilly
 JAN 21 2016</text>
 <text x="76.2" y="2.54" size="1.778" layer="21">SPKR</text>
@@ -3754,18 +3754,18 @@ Please make sure your boards conform to these design rules.</description>
 <via x="72.39" y="41.91" extent="1-16" drill="0.6" shape="square"/>
 </signal>
 <signal name="AUD_TXD">
-<contactref element="JP1" pad="7"/>
 <contactref element="U$1" pad="8"/>
-<wire x1="60.96" y1="22.86" x2="57.15" y2="22.86" width="0.4064" layer="1"/>
-<wire x1="57.15" y1="22.86" x2="57.15" y2="40.64" width="0.4064" layer="1"/>
+<wire x1="57.15" y1="20.32" x2="57.15" y2="40.64" width="0.4064" layer="1"/>
 <wire x1="57.15" y1="40.64" x2="53.34" y2="40.64" width="0.4064" layer="1"/>
+<contactref element="JP1" pad="8"/>
+<wire x1="57.15" y1="20.32" x2="60.96" y2="20.32" width="0.4064" layer="1"/>
 </signal>
 <signal name="AUD_RXD">
-<contactref element="JP1" pad="6"/>
 <contactref element="U$1" pad="9"/>
 <wire x1="53.34" y1="43.18" x2="58.42" y2="43.18" width="0.4064" layer="1"/>
-<wire x1="58.42" y1="43.18" x2="58.42" y2="25.4" width="0.4064" layer="1"/>
-<wire x1="58.42" y1="25.4" x2="60.96" y2="25.4" width="0.4064" layer="1"/>
+<wire x1="58.42" y1="43.18" x2="58.42" y2="22.86" width="0.4064" layer="1"/>
+<contactref element="JP1" pad="7"/>
+<wire x1="58.42" y1="22.86" x2="60.96" y2="22.86" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$28">
 <contactref element="JP1" pad="5"/>
