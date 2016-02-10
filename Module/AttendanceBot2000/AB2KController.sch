@@ -22049,11 +22049,11 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </net>
 <net name="N$28" class="0">
 <segment>
-<pinref part="JP1" gate="G$1" pin="5"/>
-<wire x1="-124.46" y1="187.96" x2="-116.84" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="187.96" x2="-116.84" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="190.5" x2="-116.84" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="JP7" gate="G$1" pin="1"/>
 <wire x1="-116.84" y1="177.8" x2="-104.14" y2="177.8" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="G$1" pin="6"/>
+<wire x1="-124.46" y1="190.5" x2="-116.84" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GO_IN" class="0">
