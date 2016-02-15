@@ -62,8 +62,8 @@ void setup() {
   digitalWrite(RPWM, LOW);
 
   
-  analogWrite(LPWM, 250);
-  analogWrite(RPWM, 240);
+  analogWrite(LPWM, 70);
+  analogWrite(RPWM, 60);
 
   int v = sfx.volDown();
   while(v > 146) {
