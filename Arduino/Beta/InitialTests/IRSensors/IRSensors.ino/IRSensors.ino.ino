@@ -13,6 +13,12 @@ void setup() {
   sensor_names[2] = A2; 
   sensor_names[3] = A6;
   sensor_names[4] = A7;
+  int i; 
+  for(i = 0; i < 5; i++) {
+    pinMode(sensor_names[i], INPUT);
+    digitalWrite(sensor_names[i], LOW);
+  }
+
 }
 
 int sensors[5]; 
