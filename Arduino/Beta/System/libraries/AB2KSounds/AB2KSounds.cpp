@@ -30,10 +30,6 @@
 
 #include <SoftwareSerial.h>
 
-#define SFX_TX 5
-#define SFX_RX 6
-#define SFX_RST 4
-#define SFX_ACT 2
 
 /*
   0	name: CENTER00WAV	size: 8044
@@ -62,9 +58,7 @@
   23	name: SONG0003WAV	size: 396270
 */
 
-SoftwareSerial smod(SFX_TX, SFX_RX);
-
-char * AB2KSounds::digit_strings[] = { 
+static const char * digit_strings[] = { 
   "DIGIT000WAV",
   "DIGIT111WAV",
   "DIGIT222WAV",
@@ -77,15 +71,22 @@ char * AB2KSounds::digit_strings[] = {
   "DIGIT999WAV"
 };
 
-AB2KSounds::AB2KSounds()
+AB2KSounds::AB2KSounds(SoftwareSerial * sm, int rpin, int apin, HardwareSerial * dbg_sp)
 {
-  // setup software serial
-  smod.begin(9600);
+  reset_pin = rpin; 
+  active_pin = apin; 
+  dbg_serialp = dbg_sp; 
+
+  smod = sm; 
 
   // assert reset
-  pinMode(SFX_RST, OUTPUT);
-  digitalWrite(SFX_RST, LOW);
-  digitalWrite(SFX_RST, HIGH); 
+  pinMode(reset_pin, OUTPUT);
+  digitalWrite(reset_pin, LOW);
+  digitalWrite(reset_pin, HIGH); 
+
+  // empty the start buffer.
+  delay(500);
+  flushInput(); 
 
   // set volume
   setVolume(154); 
@@ -114,22 +115,23 @@ void AB2KSounds::sayNumber(int num)
     sayDigit(dig); 
     rem = rem - dig * 1000; 
   }
+  else rem = num; 
   
   if(num >= 100) {
     dig = rem / 100; 
     sayDigit(dig); 
     rem = rem - dig * 100; 
   }
+  else rem = num; 
   
   if(num >= 10) {
     dig = rem / 10; 
     sayDigit(dig); 
     rem = rem - dig * 10; 
   }
-  else {
-    sayDigit(rem); 
-  }
-
+  else rem = num;
+  
+  sayDigit(rem); 
 }
 void AB2KSounds::saySensorName(int chan_num)
 {
@@ -151,7 +153,7 @@ void AB2KSounds::saySensorName(int chan_num)
 
 void AB2KSounds::flushInput()
 {
-  while(smod.available()) smod.read();  
+  while(smod->available()) smod->read();  
 }
 
    
@@ -166,10 +168,19 @@ int AB2KSounds::setVolume(int tv)
   char cmd[2]; 
   cmd[0] = '-'; cmd[1] = '\000';
   for(i = 0; i < 256; i++) {
-    smod.println(cmd);
-    smod.readBytesUntil('\n', lb, 20);
-    v = atoi(lb);
-    if(v = tv) return v; 
+    smod->println(cmd);
+    int j; 
+    for(j = 0; j < 10; j++) {
+      smod->readBytesUntil('\n', lb, 20);
+      v = atoi(lb);
+      // if(dbg_serialp != NULL) {
+      // 	dbg_serialp->print("vol return buf = ["); dbg_serialp->print(lb); dbg_serialp->println("]");
+      // 	dbg_serialp->print(" convert to int gets v = "); dbg_serialp->println(v); 
+      // }
+      if(v != 0) break; 
+    }
+    
+    if(v == tv) return v; 
     if(v < tv) cmd[0] = '+';
     if(v > tv) cmd[0] = '-'; 
   }
@@ -189,9 +200,9 @@ void AB2KSounds::playSong(int song_num)
 void AB2KSounds::playFileName(const char * fname, bool wait_for_end)
 {
   // this is pre-emptive.   If anything else is going on, we cause it to quit.
-  if(isBusy()) smod.println("q");
+  if(isBusy()) smod->println("q");
 
-  smod.print("P"); smod.println(fname); 
+  smod->print("P"); smod->println(fname); 
   while(!isBusy()) delay(1); // wait for the sound to start. 
 
   if(wait_for_end) {
@@ -202,6 +213,6 @@ void AB2KSounds::playFileName(const char * fname, bool wait_for_end)
 
 bool AB2KSounds::isBusy()
 {
-  int v = digitalRead(SFX_ACT); 
+  int v = digitalRead(active_pin); 
   return v == 0;
 }

@@ -2,6 +2,8 @@
 #define AB2K_SOUNDS_HDR
 
 #include <Arduino.h>
+#include <SoftwareSerial.h>
+#include <HardwareSerial.h>
 
 /*
 Copyright (c) 2016, Matthew H. Reilly (kb1vc)
@@ -33,7 +35,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 class AB2KSounds {
  public:
-  AB2KSounds();
+  AB2KSounds(SoftwareSerial * sm, int rpin, int apin, HardwareSerial * dbg_sp = NULL);
 
   int setVolume(int num); 
 
@@ -45,11 +47,16 @@ class AB2KSounds {
 
   bool isBusy();
 
- private:
   void playFileName(const char * fname, bool wait_for_end = false);
+
+ private:
   void flushInput();
   void sayDigit(int num);
-  static char * digit_strings[10];
+
+  SoftwareSerial * smod; 
+  HardwareSerial * dbg_serialp; 
+  int reset_pin; 
+  int active_pin; 
 }; 
 
 #endif

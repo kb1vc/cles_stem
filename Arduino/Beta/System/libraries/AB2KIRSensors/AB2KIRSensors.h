@@ -31,7 +31,9 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#define HIST_SIZE 256
+#define HIST_BITS 8
+#define HIST_DIV (10 - HIST_BITS)
+#define HIST_SIZE (1 << HIST_BITS)
 #define HIST_LIM (HIST_SIZE - 1)
 
 class AB2KIRSensors {
@@ -39,7 +41,7 @@ class AB2KIRSensors {
   /**
    * @brief Constructor for 5 IR sensor array on AttentanceBot 2000.
    */
-  AB2KIRSensors(); 
+  AB2KIRSensors(HardwareSerial * dbp = NULL); 
 
   /**
    * @brief fetch calibration constants from EEPROM location
@@ -47,13 +49,18 @@ class AB2KIRSensors {
    */
   void retrieveCalibration(int base_addr);
 
+  /** 
+   * @brief perform calibration experiment across all sensors
+   */
+  void calibrateSensors(); 
+
   /**
-   * @brief perform calibration experiment for a channel 
+   * @brief perform calibration experiment for a channel
    * 
    * @param chan_number number of channel to be tested. 
    * @return true if calibration is complete, false otherwise. 
    */
-  bool setCalibration(int chan_number);
+  bool doCalibration(int chan_number);
 
   /**
    * @brief save calibration constants to EEPROM location
@@ -73,12 +80,16 @@ class AB2KIRSensors {
   int getSensorMin(int chan_number); 
   int getSensorRange(int chan_number);
   int getSensorAbs(int chan_number);  
+  int getSenseCount() { return sense_count; }
 
- private:
+  // private:
   int sensor_range[5]; 
   int sensor_min[5]; 
   int sensor_val[5]; 
   int histo[HIST_SIZE]; 
+  
+  int last_position; 
+  int sense_count; 
 
   static int sensors[5]; 
 
@@ -87,6 +98,8 @@ class AB2KIRSensors {
 
   void intWriteEEPROM(int addr, int val);
   int intReadEEPROM(int addr); 
+
+  HardwareSerial * dbg_serialp; 
 }; 
 
 #endif
