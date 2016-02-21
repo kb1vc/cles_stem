@@ -15,11 +15,13 @@ AB2KIRSensors * ir;
 AB2KSounds * sounds;
 
 #define GREEN_LIGHT 9
+#define GO_BUTTON 10
 int toggle; 
 void setup()
 {
-  
+  pinMode(GO_BUTTON, INPUT_PULLUP);
   pinMode(GREEN_LIGHT, OUTPUT);
+
   toggle = 0;
   Serial.begin(9600);
   Serial.println("Starting up.");
@@ -30,9 +32,14 @@ void setup()
   ir = new AB2KIRSensors(&Serial);
   sounds->setVolume(140);
 
-  sounds->playFileName("CALMODESWAV", true);
-  ir->calibrateSensors();
-  sounds->playFileName("CALMODEEWAV", true);  
+  if(!digitalRead(GO_BUTTON)) {
+    sounds->playFileName("CALMODESWAV", true);
+    ir->calibrateSensors();
+    sounds->playFileName("CALMODEEWAV", true);  
+  }
+  else {
+    sounds->playFileName("IAMLOST0WAV", true);      
+  }
 }
 
 
