@@ -28,7 +28,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-AB2KMotors::AB2KMotors(int left_dirpin, int left_speedpin, 
+AB2KMotor::AB2KMotor(int left_dirpin, int left_speedpin, 
 		       int right_dirpin, int right_speedpin)
 {
   ldir_pin = left_dirpin; 
@@ -41,6 +41,16 @@ AB2KMotors::AB2KMotors(int left_dirpin, int left_speedpin,
   pinMode(lspeed_pin, OUTPUT);
   pinMode(rspeed_pin, OUTPUT);    
 
+#if 0  
+  // set PWM rate to 4kHz or so. 
+  TCCR2B = (TCCR2B & 0xF8) | 2;
+  // whould ou believe 122 Hz
+  TCCR2B = (TCCR2B & 0xF8) | 6; // 122 is good, is 30 better? 
+#endif
+  
+  analogWrite(lspeed_pin, 0);
+  analogWrite(rspeed_pin, 0);
+
   l_corr = 0; 
   r_corr = 0; 
 
@@ -48,13 +58,13 @@ AB2KMotors::AB2KMotors(int left_dirpin, int left_speedpin,
 }
 
 
-void AB2KMotors::stop()
+void AB2KMotor::stop()
 {
   setSpeed(0,0);
 }
 
 
-void AB2KMotors::setSpeed(int left_speed, int right_speed, bool apply_corr)
+void AB2KMotor::setSpeed(int left_speed, int right_speed, bool apply_corr)
 {
   int lsp, rsp; 
 
@@ -62,19 +72,19 @@ void AB2KMotors::setSpeed(int left_speed, int right_speed, bool apply_corr)
   rsp = right_speed + r_corr; 
 
   if(lsp < 0) {
-    digitalWrite(ldir_pin, LOW);
+    digitalWrite(ldir_pin, HIGH);
     lsp = (lsp < -1023) ? 1023 : (- lsp); 
   }
   else {
-    digitalWrite(ldir_pin, HIGH);
+    digitalWrite(ldir_pin, LOW);
     lsp = (lsp > 1023) ? 1023 : lsp; 
   }
   if(rsp < 0) {
-    digitalWrite(rdir_pin, LOW);
+    digitalWrite(rdir_pin, HIGH);
     rsp = (rsp < -1023) ? 1023 : (- rsp); 
   }
   else {
-    digitalWrite(rdir_pin, HIGH);
+    digitalWrite(rdir_pin, LOW);
     rsp = (rsp > 1023) ? 1023 : rsp;
   }
 
@@ -83,7 +93,7 @@ void AB2KMotors::setSpeed(int left_speed, int right_speed, bool apply_corr)
 }
 
 
-void AB2KMotors::setMotorCorrection(int left_incr, int right_incr)
+void AB2KMotor::setMotorCorrection(int left_incr, int right_incr)
 {
   l_corr = left_incr; 
   r_corr = right_incr; 

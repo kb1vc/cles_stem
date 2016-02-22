@@ -216,3 +216,13 @@ bool AB2KSounds::isBusy()
   int v = digitalRead(active_pin); 
   return v == 0;
 }
+
+void AB2KSounds::stop()
+{
+  if(isBusy()) {
+    while(smod->available()) smod->read();      
+    smod->println("q");
+    char lb[20]; 
+    smod->readBytesUntil('\n', lb, 20);
+  }
+}

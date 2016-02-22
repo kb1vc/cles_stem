@@ -49,6 +49,8 @@ class AB2KSounds {
 
   void playFileName(const char * fname, bool wait_for_end = false);
 
+  void stop();
+
  private:
   void flushInput();
   void sayDigit(int num);

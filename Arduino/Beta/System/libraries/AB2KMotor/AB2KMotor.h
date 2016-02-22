@@ -35,7 +35,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include <Arduino.h>
 
-class AB2KMotors {
+class AB2KMotor {
  public:
   /**
    * @brief constructor
@@ -45,8 +45,8 @@ class AB2KMotors {
    * @param right_dirpin Arduino IO pin controlling right motor direction
    * @param right_speedpin Arduino IO pin controlling right motor speed
    */
-  AB2KMotors(int left_dirpin, int left_speedpin, 
-	     int right_dirpin, int right_speedpin);
+  AB2KMotor(int left_dirpin, int left_speedpin, 
+	    int right_dirpin, int right_speedpin);
 
 
   /**
