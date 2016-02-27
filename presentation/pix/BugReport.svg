@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="8in"
+   height="8.5in"
+   viewBox="0 0 720.00001 765.00002"
+   id="svg9051"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="BugReport.svg">
+  <defs
+     id="defs9053" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.74784138"
+     inkscape:cx="302.51378"
+     inkscape:cy="365.71927"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="982"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     units="in" />
+  <metadata
+     id="metadata9056">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-287.36217)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="36.103912"
+       y="344.99295"
+       id="text9618"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan9620"
+         x="36.103912"
+         y="344.99295"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:30px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">Bug Report</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="49.475731"
+       y="406.50333"
+       id="text9622"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan9624"
+         x="49.475731"
+         y="406.50333">Project: Attendance Bot 2000</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="49.475731"
+       y="443.94443"
+       id="text9626"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan9628"
+         x="49.475731"
+         y="443.94443">HW Engineer: Alice DeChat</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="50.200829"
+       y="478.71115"
+       id="text9630"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan9632"
+         x="50.200829"
+         y="478.71115">SW Engineer: Bob Frapples</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="49.475731"
+       y="525.51251"
+       id="text9634"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan9636"
+         x="49.475731"
+         y="525.51251">Product Manager: Edgar Winter</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="49.475731"
+       y="596.38318"
+       id="text9638"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan9640"
+         x="49.475731"
+         y="596.38318">Problem:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:'Courier 10 Pitch';-inkscape-font-specification:'Courier 10 Pitch, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="60.173183"
+       y="660.56793"
+       id="text9642"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan9644"
+         x="60.173183"
+         y="660.56793">Robot motors are too weak to propel </tspan><tspan
+         sodipodi:role="line"
+         x="60.173183"
+         y="688.69293"
+         id="tspan9670">Beta unit #1.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="49.475731"
+       y="834.40155"
+       id="text9646"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan9648"
+         x="49.475731"
+         y="834.40155">Resolution:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="50.200829"
+       y="748.8219"
+       id="text9650"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="50.200829"
+         y="748.8219"
+         id="tspan9654">Severity:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;line-height:125%;font-family:'Courier 10 Pitch';-inkscape-font-specification:'Courier 10 Pitch, Bold Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#f90000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="101.62583"
+       y="788.93738"
+       id="text9658"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan9660"
+         x="101.62583"
+         y="788.93738">SHOWTSTOPPER</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="66.859108"
+       y="867.83112"
+       id="text9662"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan9664"
+         x="66.859108"
+         y="867.83112"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:'Courier 10 Pitch';-inkscape-font-specification:'Courier 10 Pitch, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Replace DAGU SD2 units with SD8 for improved </tspan><tspan
+         sodipodi:role="line"
+         x="66.859108"
+         y="895.95612"
+         id="tspan9666"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:'Courier 10 Pitch';-inkscape-font-specification:'Courier 10 Pitch, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">torque. This change requires remounting the </tspan><tspan
+         sodipodi:role="line"
+         x="66.859108"
+         y="924.08112"
+         id="tspan9668"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:'Courier 10 Pitch';-inkscape-font-specification:'Courier 10 Pitch, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">wheels outboard of the case. </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="38.778278"
+       y="1033.6416"
+       id="text9672"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan9674"
+         x="38.778278"
+         y="1033.6416"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;line-height:125%;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L, Bold Italic';text-align:start;writing-mode:lr-tb;text-anchor:start">BigCo -- Where good ideas become great products</tspan></text>
+  </g>
+</svg>

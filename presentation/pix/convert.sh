@@ -1,8 +1,8 @@
 #!/bin/bash
 
-for fi in AliceDesk.svg BobDesk.svg 
+for fi in AliceDesk.svg BobDesk.svg HarrietTester.svg Teacher.svg Artist.svg BizGuy.svg BugReport.svg Lawyer.svg
 do
     bn=`basename $fi .svg`
     
-    inkscape -f $fi  -e ${bn}.png
+    convert $fi ${bn}.png
 done
