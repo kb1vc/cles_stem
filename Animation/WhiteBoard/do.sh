@@ -34,47 +34,6 @@ rm -f WB_rocket.mp4
 ffmpeg -framerate 10  -i WB_rocket_%03d.png -vcodec mpeg4 WB_rocket.mp4
 
 
-rm *.png
-
-for fi in WB_robot[0-9].svg
-do
-    bn=`basename $fi .svg`
-    inkscape -f $fi -e ${bn}_still.png
-    sleep 1
-done
-
-for fi in WB_robot_run_*.svg
-do
-    bn=`basename $fi .svg`
-    inkscape -f $fi -e ${bn}.png
-    sleep 1
-done
-
-let l=0
-for (( i = 0; i < 5; i++))
-do
-    an=`printf "%03d" $l`
-    ln -s WB_robot${i}_still.png WB_robot_${an}.png
-    l=$((l+1))
-done
-
-for (( i = 0; i < 20; i++))
-do
-    an=`printf "%03d" $l`
-    ln -s WB_robot_run_${i}.png WB_robot_${an}.png
-    l=$((l+1))
-done
-
-rm WB_robot.mp4
-ffmpeg -framerate 2  -i WB_robot_%03d.png -vcodec mpeg4 WB_robot.mp4
-
-# rm WB_robot*.png
-
-# this is the opening frame
-inkscape -f WB_robot0.svg -e WB_robot_run_first.png
-
-inkscape -f WB_robot_run_19.svg -e WB_robot_run_last.png
-
 
 
 # this is the opening frame
